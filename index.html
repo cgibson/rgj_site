@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>Remote Game Jam 2017</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+
+<style>
+body {
+	/*background-color: #eee;*/
+	font-family: 'Roboto', sans-serif;
+}
+
+.jumbo {
+	color: #fff;
+	background-image: linear-gradient(0deg, #3a7bd5, #3a6073);
+}
+
+.jumbo h1 {
+	font-weight: 400;
+}
+
+.jumbo p {
+	font-weight: 300;
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #99bfe7;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #5f92c8;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="jumbotron jumbo">
+<div class="container">
+<h1>Remote Game Jam 2017</h1>
+<p><strong>Remote Game Jam</strong> is an event where participants work with others online to make games from scratch in 48 hours. Think of it like a hackathon, except the end result is a game. This year's event is being held on the weekend of <strong style="color:orange;">November 10th, 2017</strong> starting at <strong>7:00pm</strong>.
+<br>
+<p><a class="btn btn-success btn-lg" href="https://goo.gl/forms/M2s9r0tTnkmY69mN2">Register for RGJ 2017 </a></p>
+
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-4">
+<h2>No Experience Necessary!</h2>
+<hr>
+<p><strong>No, seriously.</strong></p>
+<p>You don't need to know how to make games to participate. <strong>You don't even need to be able to program.</strong> Games need artwork, music/sound, testing, etc....</p>
+
+<p><strong>You aren't limited to video games either.</strong> Got an amazing card game idea you've been dying to try out? Want to try to build the next Settlers of Catan? Have at it!</p>
+</div>
+
+<div class="col-md-4">
+<h2>Themes and Diversifiers</h2>
+<hr>
+<p>Because this event is scheduled close to Halloween, our event is going to be <strong style="color:red;">spooky themed</strong>. However, to help encourage idea-building we will also have a number of <strong>diversifiers</strong>. Consider these stretch goals or challenges you can choose to take on.</p>
+
+<p>We want your help deciding what our diversifiers should be! There will be an open suggestion and voting period in the weeks before the event.</p>
+</div>
+
+<div class="col-md-4">
+<h2>Resources</h2>
+<hr>
+<p>Making a game in 48 hours is hard enough. To help you along your journey, we've created a list of resources you can take advantage of. Click the link below to find resources on game engines, free art assets and more!</p>
+<p><a class="btn btn-default" href="https://docs.google.com/document/d/1i5aKZCDvhw8bCG6uL6ox33yXC4cL10pR_gJhbH6FLpw/edit?usp=sharing">Resource Center </a></p>
+</div>
+
+</div>
+
+<br><br><br>
+
+<center>
+<div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+</center>
+
+</div>
+
+
+<script language="JavaScript">
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(2017, 10, 10, 19, 0, 0, 0);
+initializeClock('clockdiv', deadline);
+</script>
+
+
+</body>
+</html>
