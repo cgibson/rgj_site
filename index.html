@@ -158,8 +158,8 @@ body {
       <center>
         <span class="glyphicon glyphicon-cog" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
       </center>
-      <a href="#game-frameworks-link" class="btn btn-link btn-block alert-link">Game Frameworks</a>
-      <a href="#game-engines-link" class="btn btn-link btn-block alert-link">Game Engines</a><br>
+      <a href="#game-frameworks" class="btn btn-link btn-block alert-link">Game Frameworks</a>
+      <a href="#game-engines" class="btn btn-link btn-block alert-link">Game Engines</a><br>
     </div>
   </div>
   <div class="col-md-4">
@@ -167,8 +167,8 @@ body {
       <center>
         <span class="glyphicon glyphicon-picture" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
       </center>
-      <a href="#art-software-link" class="btn btn-link btn-block alert-link">Art Software</a>
-      <a href="#game-art-link" class="btn btn-link btn-block alert-link">Game Art</a><br>
+      <a href="#art-software" class="btn btn-link btn-block alert-link">Art Software</a>
+      <a href="#game-art" class="btn btn-link btn-block alert-link">Game Art</a><br>
     </div>
   </div>
   <div class="col-md-4">
@@ -176,9 +176,9 @@ body {
       <center>
         <span class="glyphicon glyphicon-headphones" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
       </center>
-      <a href="#audio-software-link" class="btn btn-link btn-block alert-link">Audio Software</a>
-      <a href="#audio-samples-link" class="btn btn-link btn-block alert-link">Audio Samples</a>
-      <a href="#game-music-link" class="btn btn-link btn-block alert-link">Game Music</a><br>
+      <a href="#audio-software" class="btn btn-link btn-block alert-link">Audio Software</a>
+      <a href="#audio-samples" class="btn btn-link btn-block alert-link">Audio Samples</a>
+      <a href="#game-music" class="btn btn-link btn-block alert-link">Game Music</a><br>
     </div>
   </div>
 </div>
@@ -189,9 +189,9 @@ body {
 
 <!--  GAME FRAMEWORKS  -->
 
-<div id="game-frameworks-link" class="container">
+<div id="game-frameworks" class="container">
 <h3><strong>Game Development Frameworks</strong></h3>
-<table id="frameworks" class="display" cellspacing="0" width="100%">
+<table id="game-frameworks-data" class="display" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th>Framework</th>
@@ -339,8 +339,8 @@ body {
 
 <!--  GAME ENGINES  -->
 
-<h3 id="game-engines-link"><strong>Game Engines</strong></h3>
-<table id="engines" class="display" cellspacing="0" width="100%">
+<h3 id="game-engines"><strong>Game Engines</strong></h3>
+<table id="game-engines-data" class="display" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th>Engine</th>
@@ -396,8 +396,8 @@ body {
 
 <!--  ART SOFTWARE  -->
 
-<h3 id="art-software-link"><strong>Art Software</strong></h3>
-<table id="art-software" class="display" cellspacing="0" width="100%">
+<h3 id="art-software"><strong>Art Software</strong></h3>
+<table id="art-software-data" class="display" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th>Name</th>
@@ -448,8 +448,8 @@ body {
 
 <!--  Game Art  -->
 
-<h3 id="game-art-link"><strong>Game Art Sites</strong></h3>
-<table id="game-art" class="display" cellspacing="0" width="100%">
+<h3 id="game-art"><strong>Game Art Sites</strong></h3>
+<table id="game-art-data" class="display" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th>Name</th>
@@ -484,8 +484,8 @@ body {
 
 <!--  Audio Software  -->
 
-<h3 id="audio-software-link"><strong>Audio Software</strong></h3>
-<table id="audio-software" class="display" cellspacing="0" width="100%">
+<h3 id="audio-software"><strong>Audio Software</strong></h3>
+<table id="audio-software-data" class="display" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th>Name</th>
@@ -518,8 +518,8 @@ body {
 
 <!--  Audio Software  -->
 
-<h3 id="audio-samples-link"><strong>Audio Sample Sites</strong></h3>
-<table id="audio-samples" class="display" cellspacing="0" width="100%">
+<h3 id="audio-samples"><strong>Audio Sample Sites</strong></h3>
+<table id="audio-samples-data" class="display" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th>Name</th>
@@ -556,8 +556,8 @@ body {
 
 <!--  Audio Software  -->
 
-<h3 id=""game-music-link"><strong>Free Game Music</strong></h3>
-<table id="game-music" class="display" cellspacing="0" width="100%">
+<h3 id="game-music"><strong>Free Game Music</strong></h3>
+<table id="game-music-data" class="display" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th>Name</th>
@@ -649,14 +649,14 @@ initializeClock('clockdiv', deadline);
 
 $(document).ready(function() {
   $(document).ready(function() {
-    $('#frameworks').DataTable( {"bPaginate": false});
+    $('#game-frameworks-data').DataTable( {"bPaginate": false});
 /*
-    $('#engines').DataTable( {"bPaginate": false});
-    $('#art-software').DataTable( {"bPaginate": false});
-    $('#game-art').DataTable( {"bPaginate": false});
-    $('#audio-software').DataTable( {"bPaginate": false});
-    $('#audio-samples').DataTable( {"bPaginate": false});
-    $('#game-music').DataTable( {"bPaginate": false});
+    $('#game-engines-data').DataTable( {"bPaginate": false});
+    $('#art-software-data').DataTable( {"bPaginate": false});
+    $('#game-art-data').DataTable( {"bPaginate": false});
+    $('#audio-software-data').DataTable( {"bPaginate": false});
+    $('#audio-samples-data').DataTable( {"bPaginate": false});
+    $('#game-music-data').DataTable( {"bPaginate": false});
 */
   } );
 } );
@@ -665,31 +665,31 @@ $(document).ready(function() {
 
 <script language="JavaScript">
 
-  $('#frameworks')
+  $('#game-frameworks-data')
     .removeClass( 'display' )
     .addClass('table table-striped compact');
 
-  $('#engines')
+  $('#game-engines-data')
     .removeClass( 'display' )
     .addClass('table table-striped compact');
 
-  $('#art-software')
+  $('#art-software-data')
     .removeClass( 'display' )
     .addClass('table table-striped compact');
 
-  $('#game-art')
+  $('#game-art-data')
     .removeClass( 'display' )
     .addClass('table table-striped compact');
 
-  $('#audio-software')
+  $('#audio-software-data')
     .removeClass( 'display' )
     .addClass('table table-striped compact');
 
-  $('#audio-samples')
+  $('#audio-samples-data')
     .removeClass( 'display' )
     .addClass('table table-striped compact');
 
-  $('#game-music')
+  $('#game-music-data')
     .removeClass( 'display' )
     .addClass('table table-striped compact');
 </script>
