@@ -4,9 +4,17 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 
+<!-- DataTables -->
+<script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/>
+
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
 
 <style>
@@ -61,15 +69,18 @@ body {
 
 <body>
 
+<!--  TOP SECTION - TITLE AND SIGN UP  -->
+
 <div class="jumbotron jumbo">
 <div class="container">
 <h1>Remote Game Jam 2017</h1>
 <p><strong>Remote Game Jam</strong> is an event where participants work with others online to make games from scratch in 48 hours. Think of it like a hackathon, except the end result is a game. This year's event is being held on the weekend of <strong style="color:orange;">November 10th, 2017</strong> starting at <strong>7:00pm</strong>.
 <br>
 <p><a class="btn btn-success btn-lg" href="https://goo.gl/forms/M2s9r0tTnkmY69mN2">Register for RGJ 2017 </a></p>
+</div>
+</div>
 
-</div>
-</div>
+<!--  SECOND SECTION - MAIN CONTENTS  -->
 
 <div class="container">
 <div class="row">
@@ -95,36 +106,499 @@ body {
 <h2>Resources</h2>
 <hr>
 <p>Making a game in 48 hours is hard enough. To help you along your journey, we've created a list of resources you can take advantage of. Click the link below to find resources on game engines, free art assets and more!</p>
-<p><a class="btn btn-default" href="https://docs.google.com/document/d/1i5aKZCDvhw8bCG6uL6ox33yXC4cL10pR_gJhbH6FLpw/edit?usp=sharing">Resource Center </a></p>
+<p><a class="btn btn-default" href="#resource-center">Resource Center </a></p>
 </div>
 
+</div>
 </div>
 
 <br><br><br>
 
-<center>
-<div id="clockdiv">
-  <div>
-    <span class="days"></span>
-    <div class="smalltext">Days</div>
+<!--  COUNTDOWN  -->
+
+<div class="container">
+  <center>
+    <div id="clockdiv">
+      <div>
+        <span class="days"></span>
+        <div class="smalltext">Days</div>
+      </div>
+      <div>
+        <span class="hours"></span>
+        <div class="smalltext">Hours</div>
+      </div>
+      <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+    </div>
+  </center>
+</div>
+
+<br><br>
+
+
+
+
+
+<!--  RESOURCE CENTER  -->
+
+<div id="resource-center" class="jumbotron jumbo">
+<div class="container">
+<h1>Resource Center</h1>
+<p>Making a game in 48 hours is hard enough. Making something entirely from scratch can be very challenging. Below are a number of resources for software, frameworks and art/audio samples that are freely available for use.</p><br>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="alert alert-info">
+      <center>
+        <span class="glyphicon glyphicon-cog" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
+      </center>
+      <a href="#game-frameworks-link" class="btn btn-link btn-block alert-link">Game Frameworks</a>
+      <a href="#game-engines-link" class="btn btn-link btn-block alert-link">Game Engines</a><br>
+    </div>
   </div>
-  <div>
-    <span class="hours"></span>
-    <div class="smalltext">Hours</div>
+  <div class="col-md-4">
+    <div class="alert alert-info">
+      <center>
+        <span class="glyphicon glyphicon-picture" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
+      </center>
+      <a href="#art-software-link" class="btn btn-link btn-block alert-link">Art Software</a>
+      <a href="#game-art-link" class="btn btn-link btn-block alert-link">Game Art</a><br>
+    </div>
   </div>
-  <div>
-    <span class="minutes"></span>
-    <div class="smalltext">Minutes</div>
-  </div>
-  <div>
-    <span class="seconds"></span>
-    <div class="smalltext">Seconds</div>
+  <div class="col-md-4">
+    <div class="alert alert-info">
+      <center>
+        <span class="glyphicon glyphicon-headphones" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
+      </center>
+      <a href="#audio-software-link" class="btn btn-link btn-block alert-link">Audio Software</a>
+      <a href="#audio-samples-link" class="btn btn-link btn-block alert-link">Audio Samples</a>
+      <a href="#game-music-link" class="btn btn-link btn-block alert-link">Game Music</a><br>
+    </div>
   </div>
 </div>
-</center>
+
+</div>
+</div>
+
+
+<!--  GAME FRAMEWORKS  -->
+
+<div id="game-frameworks-link" class="container">
+<h3><strong>Game Development Frameworks</strong></h3>
+<table id="frameworks" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Framework</th>
+      <th>Description</th>
+      <th>Language</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>Cocos2D</td>
+      <td></td>
+      <td>Javascript, C++, Lua</td>
+      <td><a href="http://www.cocos2d-x.org/">http://www.cocos2d-x.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>ImpactJS</td>
+      <td></td>
+      <td>Javascript</td>
+      <td><a href="http://impactjs.com/">http://impactjs.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>CraftyJS</td>
+      <td></td>
+      <td>Javascript</td>
+      <td><a href="http://craftyjs.com/">http://craftyjs.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>LimeJS</td>
+      <td></td>
+      <td>Javascript</td>
+      <td><a href="http://www.limejs.com/">http://www.limejs.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>Two.js</td>
+      <td></td>
+      <td>Javascript</td>
+      <td><a href="http://jonobr1.github.io/two.js/">http://jonobr1.github.io/two.js/</a></td>
+    </tr>
+
+    <tr>
+      <td>PyGame</td>
+      <td></td>
+      <td>Python</td>
+      <td><a href="https://www.pygame.org">https://www.pygame.org</a></td>
+    </tr>
+
+    <tr>
+      <td>Lua LOVE</td>
+      <td></td>
+      <td>Lua</td>
+      <td><a href="https://love2d.org/">https://love2d.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>Piston</td>
+      <td></td>
+      <td>Rust</td>
+      <td><a href="http://www.piston.rs/">http://www.piston.rs/</a></td>
+    </tr>
+
+    <tr>
+      <td>Oxygine</td>
+      <td>Cross-platform 2D C++ Game Library</td>
+      <td>C++</td>
+      <td><a href="http://oxygine.org/gallery.php">http://oxygine.org/gallery.php</a></td>
+    </tr>
+
+    <tr>
+      <td>SFML</td>
+      <td>Simple and Fast Multimedia Framework</td>
+      <td>C++, Java, Ruby, Python</td>
+      <td><a href="http://www.sfml-dev.org/">http://www.sfml-dev.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>Angel2d</td>
+      <td></td>
+      <td>C++</td>
+      <td><a href="http://angel2d.com/">http://angel2d.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>Crafty.js</td>
+      <td>A flexible framework for Javascript games</td>
+      <td>Javascript</td>
+      <td><a href="http://craftyjs.com/">http://craftyjs.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>Pixi.js</td>
+      <td></td>
+      <td>Javascript</td>
+      <td><a href="https://github.com/pixijs/pixi.js">https://github.com/pixijs/pixi.js</a></td>
+    </tr>
+
+    <tr>
+      <td>Melon.js</td>
+      <td></td>
+      <td>Javascript</td>
+      <td><a href="https://github.com/melonjs/melonJS">https://github.com/melonjs/melonJS</a></td>
+    </tr>
+
+    <tr>
+      <td>Phaser.io</td>
+      <td></td>
+      <td>Javascript</td>
+      <td><a href="https://phaser.io/">https://phaser.io/</a></td>
+    </tr>
+
+    <tr>
+      <td>MonoGame</td>
+      <td>Cross-Platform Game Framework</td>
+      <td>C#</td>
+      <td><a href="http://www.monogame.net/">http://www.monogame.net/</a></td>
+    </tr>
+
+    <tr>
+      <td>LibGDX</td>
+      <td></td>
+      <td>C++</td>
+      <td><a href="https://github.com/libgdx/libgdx">https://github.com/libgdx/libgdx</a></td>
+    </tr>
+
+    <tr>
+      <td>Urho3D</td>
+      <td></td>
+      <td>C++, AngelScript, Lua</td>
+      <td><a href="https://urho3d.github.io/">https://urho3d.github.io/</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<br>
+<br>
+<hr>
+
+<!--  GAME ENGINES  -->
+
+<h3 id="game-engines-link"><strong>Game Engines</strong></h3>
+<table id="engines" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Engine</th>
+      <th>Description</th>
+      <th>Language</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>Unreal Engine 4</td>
+      <td></td>
+      <td>C++</td>
+      <td><a href="https://www.unrealengine.com/">https://www.unrealengine.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>Unity3D</td>
+      <td></td>
+      <td>Javascript, Typescript, C#</td>
+      <td><a href="https://unity3d.com/">https://unity3d.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>Construct 2 (Scirra)</td>
+      <td></td>
+      <td>???</td>
+      <td><a href="https://www.scirra.com/">https://www.scirra.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>Xenko</td>
+      <td></td>
+      <td>C#</td>
+      <td><a href="https://xenko.com/features/">https://xenko.com/features/</a></td>
+    </tr>
+
+    <tr>
+      <td>Godot Engine</td>
+      <td>Multi-platform 2D and 3D open source game engine</td>
+      <td>C++</td>
+      <td><a href="https://godotengine.org/">https://godotengine.org/</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<br>
+<br>
+<hr>
+
+<!--  ART SOFTWARE  -->
+
+<h3 id="art-software-link"><strong>Art Software</strong></h3>
+<table id="art-software" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>Krita</td>
+      <td>Profession and FREE open-source painting program</td>
+      <td><a href="https://krita.org/en/">https://krita.org/en/</a></td>
+    </tr>
+
+    <tr>
+      <td>Aesprite</td>
+      <td>Animated Sprite Editor and Pixel Art Tool</td>
+      <td><a href="https://www.aseprite.org/">https://www.aseprite.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>GIMP</td>
+      <td>GNU Image Manipulation Program</td>
+      <td><a href="https://www.gimp.org/">https://www.gimp.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>GraphicsGale</td>
+      <td>Graphic Animation Editor</td>
+      <td><a href="https://graphicsgale.com/us/">https://graphicsgale.com/us/</a></td>
+    </tr>
+
+    <tr>
+      <td>Piskel</td>
+      <td>Free online editor for animated sprites</td>
+      <td><a href="https://www.piskelapp.com/">https://www.piskelapp.com/</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<br>
+<br>
+<hr>
+
+<!--  Game Art  -->
+
+<h3 id="game-art-link"><strong>Game Art Sites</strong></h3>
+<table id="game-art" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>Open Game Art</td>
+      <td><a href="https://opengameart.org/">https://opengameart.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>Itch.io Game Assets</td>
+      <td><a href="https://itch.io/game-assets/free">https://itch.io/game-assets/free</a></td>
+    </tr>
+
+    <tr>
+      <td>Game Art 2D</td>
+      <td><a href="http://www.gameart2d.com/freebies.html">http://www.gameart2d.com/freebies.html</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<br>
+<br>
+<hr>
+
+<!--  Audio Software  -->
+
+<h3 id="audio-software-link"><strong>Audio Software</strong></h3>
+<table id="audio-software" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>Audacity</td>
+      <td>Free multi-track audio editor and recorder</td>
+      <td><a href="http://www.audacityteam.org/">http://www.audacityteam.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>bfxr</td>
+      <td>Simple sound effect generator</td>
+      <td><a href="http://www.bfxr.net/">http://www.bfxr.net/</a></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<br>
+<br>
+<hr>
+
+<!--  Audio Software  -->
+
+<h3 id="audio-samples-link"><strong>Audio Sample Sites</strong></h3>
+<table id="audio-samples" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>FreeSound.org</td>
+      <td><a href="https://freesound.org/">https://freesound.org/</a></td>
+    </tr>
+
+
+    <tr>
+      <td>99 Sounds</td>
+      <td><a href="http://99sounds.org/">http://99sounds.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>GameSounds.xyz</td>
+      <td><a href="https://gamesounds.xyz/">https://gamesounds.xyz/</a></td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+<br>
+<br>
+<hr>
+
+<!--  Audio Software  -->
+
+<h3 id=""game-music-link"><strong>Free Game Music</strong></h3>
+<table id="game-music" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>DL-Sounds Game Category</td>
+      <td><a href="https://www.dl-sounds.com/royalty-free/category/game-film/video-game/">https://www.dl-sounds.com/royalty-free/category/game-film/video-game/</a></td>
+    </tr>
+
+    <tr>
+      <td>MusOpen</td>
+      <td><a href="https://musopen.org/music/">https://musopen.org/music/</a></td>
+    </tr>
+
+    <tr>
+      <td>SoundImage.org</td>
+      <td><a href="http://soundimage.org/">http://soundimage.org/</a></td>
+    </tr>
+
+    <tr>
+      <td>Purple Planet Music</td>
+      <td><a href="http://www.purple-planet.com/">http://www.purple-planet.com/</a></td>
+    </tr>
+
+    <tr>
+      <td>GameSounds.xyz</td>
+      <td><a href="https://gamesounds.xyz/">https://gamesounds.xyz/</a></td>
+    </tr>
+
+  </tbody>
+</table>
 
 </div>
 
+
+
+<!--  SCRIPTS  -->
 
 <script language="JavaScript">
 function getTimeRemaining(endtime) {
@@ -168,6 +642,56 @@ function initializeClock(id, endtime) {
 
 var deadline = new Date(2017, 10, 10, 19, 0, 0, 0);
 initializeClock('clockdiv', deadline);
+</script>
+
+<!--  SCRIPTS  -->
+<script language="JavaScript">
+
+$(document).ready(function() {
+  $(document).ready(function() {
+    $('#frameworks').DataTable( {"bPaginate": false});
+/*
+    $('#engines').DataTable( {"bPaginate": false});
+    $('#art-software').DataTable( {"bPaginate": false});
+    $('#game-art').DataTable( {"bPaginate": false});
+    $('#audio-software').DataTable( {"bPaginate": false});
+    $('#audio-samples').DataTable( {"bPaginate": false});
+    $('#game-music').DataTable( {"bPaginate": false});
+*/
+  } );
+} );
+
+</script>
+
+<script language="JavaScript">
+
+  $('#frameworks')
+    .removeClass( 'display' )
+    .addClass('table table-striped compact');
+
+  $('#engines')
+    .removeClass( 'display' )
+    .addClass('table table-striped compact');
+
+  $('#art-software')
+    .removeClass( 'display' )
+    .addClass('table table-striped compact');
+
+  $('#game-art')
+    .removeClass( 'display' )
+    .addClass('table table-striped compact');
+
+  $('#audio-software')
+    .removeClass( 'display' )
+    .addClass('table table-striped compact');
+
+  $('#audio-samples')
+    .removeClass( 'display' )
+    .addClass('table table-striped compact');
+
+  $('#game-music')
+    .removeClass( 'display' )
+    .addClass('table table-striped compact');
 </script>
 
 
