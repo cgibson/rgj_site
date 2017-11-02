@@ -21,11 +21,14 @@
 body {
 	/*background-color: #eee;*/
 	font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
 }
 
 .jumbo {
-	color: #fff;
-	background-image: linear-gradient(0deg, #3a7bd5, #3a6073);
+/*	color: #fff;
+	background-image: linear-gradient(0deg, #3a7bd5, #3a6073);*/
+  background-color: #2a6bb5;
+  color: #f0f0f0;
 }
 
 .jumbo h1 {
@@ -73,6 +76,31 @@ body {
 
 <body>
 
+
+<!--  NAVBAR  -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">RGJ 2017</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#format">Format</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <!-- <li><a href="#faq">FAQ</a></li> -->
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
 <!--  TOP SECTION - TITLE AND SIGN UP  -->
 
 <div class="jumbotron jumbo">
@@ -80,42 +108,52 @@ body {
 <h1>Remote Game Jam 2017</h1>
 <p><strong>Remote Game Jam</strong> is an event where participants work with others online to make games from scratch in 48 hours. Think of it like a hackathon, except the end result is a game. This year's event is being held on the weekend of <strong style="color:orange;">November 10th, 2017</strong> starting at <strong>7:00pm</strong>.
 <br>
-<p><a class="btn btn-success btn-lg" href="https://goo.gl/forms/M2s9r0tTnkmY69mN2">Register for RGJ 2017</a>
-<a class="btn btn-warning btn-lg" href="https://goo.gl/forms/zFtmXH9PT2iwAH0K2">Team Registration</a></p>
 </div>
 </div>
 
 <!--  SECOND SECTION - MAIN CONTENTS  -->
 
 <div class="container">
-<div class="row">
+  <div class="row">
 
-<div class="col-md-4">
-<h2>No Experience Necessary!</h2>
-<hr>
-<p><strong>No, seriously.</strong></p>
-<p>You don't need to know how to make games to participate. <strong>You don't even need to be able to program.</strong> Games need artwork, music/sound, testing, etc....</p>
+  <div class="col-md-4">
+  <h2>No Experience Necessary!</h2>
+  <hr>
+  <p><strong>No, seriously.</strong></p>
+  <p>You don't need to know how to make games to participate. <strong>You don't even need to be able to program.</strong> Games need artwork, music/sound, testing, etc....</p>
 
-<p><strong>You aren't limited to video games either.</strong> Got an amazing card game idea you've been dying to try out? Want to try to build the next Settlers of Catan? Have at it!</p>
-</div>
+  <p><strong>You aren't limited to video games either.</strong> Got an amazing card game idea you've been dying to try out? Want to try to build the next Settlers of Catan? Have at it!</p>
+  </div>
 
-<div class="col-md-4">
-<h2>Themes and Diversifiers</h2>
-<hr>
-<p>Because this event is scheduled close to Halloween, our event is going to be <strong style="color:red;">spooky themed</strong>. However, to help encourage idea-building we will also have a number of <strong>diversifiers</strong>. Consider these stretch goals or challenges you can choose to take on.</p>
+  <div class="col-md-4">
+  <h2>Themes and Diversifiers</h2>
+  <hr>
+  <p>Because this event is scheduled close to Halloween, our event is going to be <strong style="color:red;">spooky themed</strong>. However, to help encourage idea-building we will also have a number of <strong>diversifiers</strong>. Consider these stretch goals or challenges you can choose to take on.</p>
 
-<p>We want your help deciding what our diversifiers should be! There will be an open suggestion and voting period in the weeks before the event.</p>
-</div>
+  <p>We want your help deciding what our diversifiers should be! There will be an open suggestion and voting period in the weeks before the event.</p>
+  </div>
 
-<div class="col-md-4">
-<h2>Resources</h2>
-<hr>
-<p>Making a game in 48 hours is hard enough. To help you along your journey, we've created a list of resources you can take advantage of. Click the link below to find resources on game engines, free art assets and more!</p>
-<p><a class="btn btn-default" href="#resource-center">Resource Center </a></p>
-</div>
+  <div class="col-md-4">
+  <h2>Resources</h2>
+  <hr>
+  <p>Making a game in 48 hours is hard enough. To help you along your journey, we've created a list of resources you can take advantage of. Click the link below to find resources on game engines, free art assets and more!</p>
+  </div>
+  </div>
 
-</div>
-</div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p><a class="btn btn-success btn-lg btn-block" href="https://goo.gl/forms/M2s9r0tTnkmY69mN2">Register for RGJ 2017!</a></p>
+    </div>
+    <div class="col-md-4">
+      <p><a class="btn btn-primary btn-lg btn-block" href="https://goo.gl/forms/zFtmXH9PT2iwAH0K2">Submit a Diversifier</a></p>
+    </div>
+    <div class="col-md-4">
+      <p><a class="btn btn-primary btn-lg btn-block" href="#resources">Resource Center</a></p>
+    </div>
+  </div>
+
+</div> <!-- /container -->
 
 <br><br><br>
 
@@ -142,7 +180,7 @@ body {
       </div>
     </div>
   </center>
-</div>
+</div> <!-- /container -->
 
 <br><br>
 
@@ -150,45 +188,143 @@ body {
 
 
 
+<!--  FORMAT  -->
+
+<div id="format" class="jumbotron jumbo">
+<div class="container">
+<h1>What To Expect in RGJ 2017</h1>
+<p>Game Jams, like Hackathons, involve slapping together a (mostly) finished product in a short period of time. However, there are no central "jam sites" for the Remote Game Jam. Here's how this will change things...</p><br>
+
+</div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>The Rules</h2>
+      <p align=justify><strong>Remote Game Jam</strong> is an event where you create a game from scratch in a weekend based on a theme.</p>
+
+      <p align=justify>Additional constraints are <strong>voted on by the community</strong>. We call these <strong>diversifiers</strong>. Diversifier suggestions begin 2 weeks before the event and are voted on <i>the day of the event</i></p>
+
+      <p align=justify><strong>We believe that creativity loves constraints.</strong> While not required, we encourage participants to consider including diviersifiers in their games.</p>
+
+      <p>Diversifiers are <strong>revealed at the start</strong> of the event</p>
+    </div>
+    <div class="col-md-4">
+      <h2>The Jam</h2>
+      <p>This event is <strong>open to all participants</strong> who want to join and make something.</p>
+
+      <ul>
+        <li>You may work <strong>alone or in a team.</strong></li>
+        <li>You must make your game in <strong>48 hours</strong>.</li>
+        <li>You are free to use <strong>any tools or libraries</strong>.</li>
+        <li>You're free to start with <strong>any base code you have.</strong></li>
+      </ul>
+
+      <p align=justify>We highly encourage participants to <strong>not build any game assets or game logic</strong> before the event. You won't know the themes before-hand, and <strong>it makes things more fun!</strong></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Submitting Entries</h2>
+      <p align=justify>While not necessary, <strong>we recommend you submit your game</strong> so that others can play what you made.</p>
+      <p align=justify>Please include the following information with the game:</p>
+      <ul>
+        <li>The name of the game</li>
+        <li>The name of the team</li>
+        <li>Team members who participated</li>
+        <li>Instructions on how to run the game</li>
+        <li>Any requirements (software, librariest etc...)</li>
+      </ul>
+      <p align=justify>Final submissions are generally required by 9pm on the last day of the Jam</p>
+      <p align=justify>Send your entry to <a href="mailto:rgj@mrvoxel.com">rgj@mrvoxel.com</a> or contact the jam organizer.</p>
+    </div>
+  </div>
+</div> <!-- /container -->
+
+<br><br>
+
+
+
+
+
+<!--  SCHEDULE  -->
+
+<div id="schedule" class="jumbotron jumbo">
+<div class="container">
+<h1>RGJ 2017 Schedule</h1>
+
+</div>
+</div>
+
+
+<div class="container">
+<table class="table table-striped compact" cellspacing="0" width="100%">
+    <tr>
+      <td>2 weeks before Jame</td>
+      <td>Diversifier submissions will be opened.</td>
+    </tr>
+    <tr>
+      <td>Day of the Jam</td>
+      <td>Diversifier voting begins.</td>
+    </tr>
+      <td>7pm Friday</td>
+      <td>
+        <strong>Jam officially begins!</strong><br>
+        Introductions and Explanation<br>
+        Diversifier voting continues<br>
+        Main <i>Discord</i> channel becomes available<br>
+        Game pitch documents shared
+      </td>
+    </tr>
+    </tr>
+      <td>7:30pm Friday</td>
+      <td>
+        Diversifier voting closes<br>
+        Diversifiers announced
+      </td>
+    </tr>
+    </tr>
+      <td>9:00pm Friday</td>
+      <td>
+        Game pitches are completed<br>
+        Teams should be forming around ideas
+      </td>
+    </tr>
+    </tr>
+      <td>11:00pm Friday</td>
+      <td>
+        Final teams submitted<br>
+        Game design/development should be under way
+      </td>
+    </tr>
+    </tr>
+      <td>5:00pm Sunday</td>
+      <td>
+        Development should be winding down<br>
+        Game submission forms sent out
+      </td>
+    </tr>
+    </tr>
+      <td>7:00pm Sunday</td>
+      <td>
+        <strong>The Jam is Over</strong><br>
+        Google Hangouts to allow participants to share their work
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<br><br>
+
+
+
 <!--  RESOURCE CENTER  -->
 
-<div id="resource-center" class="jumbotron jumbo">
+<div id="resources" class="jumbotron jumbo">
 <div class="container">
 <h1>Resource Center</h1>
 <p>Making a game in 48 hours is hard enough. Making something entirely from scratch can be very challenging. Below are a number of resources for software, frameworks and art/audio samples that are freely available for use.</p><br>
-
-<!--
-<div class="row">
-  <div class="col-md-4">
-    <div class="alert alert-info">
-      <center>
-        <span class="glyphicon glyphicon-cog" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
-      </center>
-      <a href="#game-frameworks" class="btn btn-link btn-block alert-link">Game Frameworks</a>
-      <a href="#game-engines" class="btn btn-link btn-block alert-link">Game Engines</a><br>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="alert alert-info">
-      <center>
-        <span class="glyphicon glyphicon-picture" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
-      </center>
-      <a href="#art-software" class="btn btn-link btn-block alert-link">Art Software</a>
-      <a href="#game-art" class="btn btn-link btn-block alert-link">Game Art</a><br>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="alert alert-info">
-      <center>
-        <span class="glyphicon glyphicon-headphones" style="font-size: 36pt;" aria-hidden="true"></span><br><br>
-      </center>
-      <a href="#audio-software" class="btn btn-link btn-block alert-link">Audio Software</a>
-      <a href="#audio-samples" class="btn btn-link btn-block alert-link">Audio Samples</a>
-      <a href="#game-music" class="btn btn-link btn-block alert-link">Game Music</a><br>
-    </div>
-  </div>
-</div>
--->
 
 </div>
 </div>
