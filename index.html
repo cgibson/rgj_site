@@ -39,29 +39,6 @@ body {
 	font-weight: 300;
 }
 
-#clockdiv{
-	font-family: sans-serif;
-	color: #fff;
-	display: inline-block;
-	font-weight: 100;
-	text-align: center;
-	font-size: 30px;
-}
-
-#clockdiv > div{
-	padding: 10px;
-	border-radius: 3px;
-	background: #99bfe7;
-	display: inline-block;
-}
-
-#clockdiv div > span{
-	padding: 15px;
-	border-radius: 3px;
-	background: #5f92c8;
-	display: inline-block;
-}
-
 .smalltext{
 	padding-top: 5px;
 	font-size: 16px;
@@ -69,6 +46,43 @@ body {
 
 .light {
   color: #999;
+}
+
+.white-box {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-left: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.height-hint-300 {
+  min-height: 300px;
+}
+
+.height-hint-380 {
+  min-height: 380px;
+}
+
+.bottomaligned {
+  position:absolute;
+  bottom:0;
+  left: 0;
+}
+
+.col-md-4.compact {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.col-md-4.compact h2 {
+  font-size: 28px;
+  text-align: center;
+}
+
+#countdown {
+  padding-left: 8px;
 }
 
 </style>
@@ -96,7 +110,12 @@ body {
         <li><a href="#resources">Resources</a></li>
         <!-- <li><a href="#faq">FAQ</a></li> -->
       </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Time Remaining: <strong><span id="countdown">00:00:00:00</span></strong></a></li>
+      </ul>
     </div><!--/.nav-collapse -->
+
   </div>
 </nav>
 
@@ -106,7 +125,7 @@ body {
 <div class="jumbotron jumbo">
 <div class="container">
 <h1>Remote Game Jam 2017</h1>
-<p><strong>Remote Game Jam</strong> is an event where participants work with others online to make games from scratch in 48 hours. Think of it like a hackathon, except the end result is a game. This year's event is being held on the weekend of <strong style="color:orange;">November 10th, 2017</strong> starting at <strong>7:00pm</strong>.
+<p><strong>Remote Game Jam</strong> is an event where participants work with others online to make games from scratch in 48 hours. Think of it like a hackathon, except the end result is a game. This year's event is being held on the weekend of <strong style="color:orange;">November 10th, 2017</strong> starting at <strong>7:00pm</strong>.</p>
 <br>
 </div>
 </div>
@@ -116,70 +135,45 @@ body {
 <div class="container">
   <div class="row">
 
-  <div class="col-md-4">
-  <h2>No Experience Necessary!</h2>
-  <hr>
-  <p><strong>No, seriously.</strong></p>
-  <p>You don't need to know how to make games to participate. <strong>You don't even need to be able to program.</strong> Games need artwork, music/sound, testing, etc....</p>
+  <div class="col-md-4 compact">
+    <div class="white-box">
+      <div class="height-hint-300">
+        <h2>No Experience Necessary!</h2>
+        <hr>
+        <p><strong>No, seriously.</strong></p>
+        <p>You don't need to know how to make games to participate. <strong>You don't even need to be able to program.</strong> Games need artwork, music/sound, testing, etc....</p>
 
-  <p><strong>You aren't limited to video games either.</strong> Got an amazing card game idea you've been dying to try out? Want to try to build the next Settlers of Catan? Have at it!</p>
-  </div>
-
-  <div class="col-md-4">
-  <h2>Themes and Diversifiers</h2>
-  <hr>
-  <p>Because this event is scheduled close to Halloween, our event is going to be <strong style="color:red;">spooky themed</strong>. However, to help encourage idea-building we will also have a number of <strong>diversifiers</strong>. Consider these stretch goals or challenges you can choose to take on.</p>
-
-  <p>We want your help deciding what our diversifiers should be! There will be an open suggestion and voting period in the weeks before the event.</p>
-  </div>
-
-  <div class="col-md-4">
-  <h2>Resources</h2>
-  <hr>
-  <p>Making a game in 48 hours is hard enough. To help you along your journey, we've created a list of resources you can take advantage of. Click the link below to find resources on game engines, free art assets and more!</p>
-  </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-md-4">
+        <p><strong>You aren't limited to video games either.</strong> Got an amazing card game idea you've been dying to try out? Want to try to build the next Settlers of Catan? Have at it!</p>
+      </div>
       <p><a class="btn btn-success btn-lg btn-block" href="https://goo.gl/forms/M2s9r0tTnkmY69mN2">Register for RGJ 2017!</a></p>
     </div>
-    <div class="col-md-4">
+  </div>
+
+  <div class="col-md-4 compact">
+    <div class="white-box">
+      <div class="height-hint-300">
+        <h2>Themes and Diversifiers</h2>
+        <hr>
+        <p>Because this event is scheduled close to Halloween, our event is going to be <strong style="color:red;">spooky themed</strong>. However, to help encourage idea-building we will also have a number of <strong>diversifiers</strong>. Consider these stretch goals or challenges you can choose to take on.</p>
+
+        <p>We want your help deciding what our diversifiers should be! There will be an open suggestion and voting period in the weeks before the event.</p>
+      </div>
       <p><a class="btn btn-primary btn-lg btn-block" href="https://goo.gl/forms/jIpDfGznd09c9cUG3">Submit a Diversifier</a></p>
-    </div>
-    <div class="col-md-4">
-      <p><a class="btn btn-primary btn-lg btn-block" href="#resources">Resource Center</a></p>
     </div>
   </div>
 
-</div> <!-- /container -->
-
-<br><br><br>
-
-<!--  COUNTDOWN  -->
-
-<div class="container">
-  <center>
-    <div id="clockdiv">
-      <div>
-        <span class="days"></span>
-        <div class="smalltext">Days</div>
+  <div class="col-md-4 compact">
+    <div class="white-box">
+      <div class="height-hint-300">
+        <h2>Resources</h2>
+        <hr>
+        <p><strong>Making a game in 48 hours is hard enough</strong>. To help you along your journey, we've created a list of resources you can take advantage of. <strong>Click the link below</strong> to find resources on game engines, free art assets and more!</p>
       </div>
-      <div>
-        <span class="hours"></span>
-        <div class="smalltext">Hours</div>
-      </div>
-      <div>
-        <span class="minutes"></span>
-        <div class="smalltext">Minutes</div>
-      </div>
-      <div>
-        <span class="seconds"></span>
-        <div class="smalltext">Seconds</div>
-      </div>
+      <p><a class="btn btn-primary btn-lg btn-block" href="#resources">Resource Center <span class="glyphicon glyphicon-menu-down"></span></a></p>
     </div>
-  </center>
+  </div>
+  </div>
+
 </div> <!-- /container -->
 
 <br><br>
@@ -201,42 +195,57 @@ body {
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-      <h2>The Rules</h2>
-      <p align=justify><strong>Remote Game Jam</strong> is an event where you create a game from scratch in a weekend based on a theme.</p>
+    <div class="col-md-4 compact">
+      <div class="white-box">
+        <div class="height-hint-380">
+          <h2>The Rules</h2>
+          <hr>
+          <p align=justify><strong>Remote Game Jam</strong> is an event where you create a game from scratch in a weekend based on a theme.</p>
 
-      <p align=justify>Additional constraints are <strong>voted on by the community</strong>. We call these <strong>diversifiers</strong>. Diversifier suggestions begin 2 weeks before the event and are voted on <i>the day of the event</i></p>
+          <p align=justify>Additional constraints are <strong>voted on by the community</strong>. We call these <strong>diversifiers</strong>. Diversifier suggestions begin 2 weeks before the event and are voted on <i>the day of the event</i></p>
 
-      <p align=justify><strong>We believe that creativity loves constraints.</strong> While not required, we encourage participants to consider including diviersifiers in their games.</p>
+          <p align=justify><strong>We believe that creativity loves constraints.</strong> While not required, we encourage participants to consider including diviersifiers in their games.</p>
 
-      <p>Diversifiers are <strong>revealed at the start</strong> of the event</p>
+          <p>Diversifiers are <strong>revealed at the start</strong> of the event</p>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4">
-      <h2>The Jam</h2>
-      <p>This event is <strong>open to all participants</strong> who want to join and make something.</p>
+    <div class="col-md-4 compact">
+      <div class="white-box">
+        <div class="height-hint-380">
+          <h2>The Jam</h2>
+          <hr>
+          <p>This event is <strong>open to all participants</strong> who want to join and make something.</p>
 
-      <ul>
-        <li>You may work <strong>alone or in a team.</strong></li>
-        <li>You must make your game in <strong>48 hours</strong>.</li>
-        <li>You are free to use <strong>any tools or libraries</strong>.</li>
-        <li>You're free to start with <strong>any base code you have.</strong></li>
-      </ul>
+          <ul>
+            <li>You may work <strong>alone or in a team.</strong></li>
+            <li>You must make your game in <strong>48 hours</strong>.</li>
+            <li>You are free to use <strong>any tools or libraries</strong>.</li>
+            <li>You're free to start with <strong>any base code you have.</strong></li>
+        </ul>
 
-      <p align=justify>We highly encourage participants to <strong>not build any game assets or game logic</strong> before the event. You won't know the themes before-hand, and <strong>it makes things more fun!</strong></p>
+          <p align=justify>We highly encourage participants to <strong>not build any game assets or game logic</strong> before the event. You won't know the themes before-hand, and <strong>it makes things more fun!</strong></p>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4">
-      <h2>Submitting Entries</h2>
-      <p align=justify>While not necessary, <strong>we recommend you submit your game</strong> so that others can play what you made.</p>
-      <p align=justify>Please include the following information with the game:</p>
-      <ul>
-        <li>The name of the game</li>
-        <li>The name of the team</li>
-        <li>Team members who participated</li>
-        <li>Instructions on how to run the game</li>
-        <li>Any requirements (software, librariest etc...)</li>
-      </ul>
-      <p align=justify>Final submissions are generally required by 9pm on the last day of the Jam</p>
-      <p align=justify>Send your entry to <a href="mailto:rgj@mrvoxel.com">rgj@mrvoxel.com</a> or contact the jam organizer.</p>
+    <div class="col-md-4 compact">
+      <div class="white-box">
+        <div class="height-hint-380">
+          <h2>Submitting Entries</h2>
+          <hr>
+          <p align=justify>While not necessary, <strong>we recommend you submit your game</strong> so that others can play what you made.</p>
+          <p align=justify>Please include the following information with the game:</p>
+          <ul>
+            <li>The name of the game</li>
+            <li>The name of the team</li>
+            <li>Team members who participated</li>
+            <li>Instructions on how to run the game</li>
+            <li>Any requirements (software, librariest etc...)</li>
+          </ul>
+          <p align=justify>Final submissions are generally required by 9pm on the last day of the Jam</p>
+          <p align=justify>Send your entry to <a href="mailto:rgj@mrvoxel.com">rgj@mrvoxel.com</a> or contact the jam organizer.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div> <!-- /container -->
@@ -620,33 +629,6 @@ function getTimeRemaining(endtime) {
     'seconds': seconds
   };
 }
-
-function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
-
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
-
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
-
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
-}
-
-var deadline = new Date(2017, 10, 10, 19, 0, 0, 0);
-initializeClock('clockdiv', deadline);
 </script>
 
 <!--  SCRIPTS  -->
@@ -670,6 +652,26 @@ $(document).ready(function() {
   $('#game-engines-data')
     .removeClass( 'display' )
     .addClass('table table-striped compact');
+</script>
+
+
+<script language="JavaScript">
+  function pad(num, size){ return ('000000000' + num).substr(-size); }
+
+  function initializeClock(id, endtime){
+    var clock = document.getElementById(id);
+    var timeinterval = setInterval(function(){
+      var t = getTimeRemaining(endtime);
+      clock.innerHTML = pad(t.days, 2) + ':' + pad(t.hours, 2) + ':' +
+                        pad(t.minutes, 2) + ':' + pad(t.seconds, 2);
+      if(t.total<=0){
+        clearInterval(timeinterval);
+      }
+    },1000);
+  }
+
+  var deadline = new Date(2017, 10, 10, 19, 0, 0, 0);
+  initializeClock('countdown', deadline);
 </script>
 
 
