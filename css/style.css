@@ -1,0 +1,171 @@
+body {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+p {
+    font-size: 20px;
+}
+
+header {
+    padding-top: 125px;
+    background-color: #2A4D6E;
+    color: #fff;
+}
+
+.footer-below {
+    font-weight: 100;
+    background-color: #182D41;
+    color: #fff;
+    padding: 1em;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4em;
+    padding: 16px 0 16px 0;
+    margin: 0px;
+    font-weight: 700;
+}
+
+.spacer span {
+    font-size: 2.5em;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 16px;
+}
+
+.spacer {
+    padding: 8px 0 8px 0;
+}
+
+span.red {
+    color: #c7254e;
+}
+
+span.blue {
+    color: #134fb8;
+}
+
+span.light-green {
+    color: #3fad46;
+}
+
+.globe-title {
+    font-size: 20em;
+}
+
+.intro-text {
+    font-size: 1.3em;
+}
+
+section {
+    padding-top: 75px;
+    color: #2A4D6E;
+}
+
+section, header {
+    padding-bottom: 75px;
+}
+
+section.dark {
+    background-color: #2A4D6E;
+    color: #fff;
+}
+
+.navbar-default, .navbar-fixed-top, .navbar-brand {
+    background-color: #182D41;
+    border: 0px;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover{
+  color: #fff;
+}
+
+.flip-clock-divider .flip-clock-label {
+    color: #fff;
+}
+
+.is-countdown {
+    padding-top: 16px;
+    background: transparent !important;
+    border: none !important;
+}
+
+@media
+(max-width : 768px) {
+/* Styles */
+    .logo {
+        width: 175px;
+        height: 175px;
+    }
+    header {
+        padding-top: 75px;
+    }
+}
+
+@media
+(max-width : 400px) {
+    .navbar-default {
+        visibility: hidden;
+    }
+    header {
+        padding-top: 32px;
+    }
+}
+
+.spacer-top {
+    padding-top: 32px;
+}
+
+.spacer-top-sm {
+    padding-top: 16px;
+}
+
+.dev-item {
+    padding-top: 4px;
+    font-size: 1.3em;
+}
+
+.dev-item i.fa {
+    padding-right: 12px;
+    padding-left: 20px;
+}
+
+.dev-item.item-left i.fa {
+    padding-right: 20px;
+    padding-left: 12px;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #3e6080 !important;
+    border-bottom-color: red !important;
+    border: none !important;
+}
+
+/* Why bootstrap... WHYYYYY!?! */
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border: none;
+}
+
+.horiz-divider {
+    width: 20px;
+    height:auto;
+    display:inline-block;
+}
