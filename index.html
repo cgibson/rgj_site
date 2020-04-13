@@ -51,7 +51,7 @@
           <span class="intro-text">A 48 hour game jam with a focus on remote collaboration</span>
           <br>
           <div style="max-width: 500px;margin-left: auto; margin-right: auto">
-            <div id="defaultCountdown" style="font-size: 20px;"></div>
+            <div id="defaultCountdown" style="font-size: 20px;"><br>April 24th, 2020 @ 5:30pm</div>
           </div>
         </div>
       </div>
@@ -588,7 +588,7 @@
   <script>
     $(function () {
       var austDay = new Date();
-      austDay = new Date(2020, 3, 24, 18);
+      austDay = new Date(2020, 3, 24, 17, 30);
       $('#defaultCountdown').countdown({ until: austDay });
       $('#year').text(austDay.getFullYear());
     });
